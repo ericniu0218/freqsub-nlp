@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data_raw/
+artifacts/**
+!artifacts/**/
+!artifacts/**/manifest.json
+*.parquet.tmp
+!artifacts/**/results.json
+!artifacts/**/dynamics.json
