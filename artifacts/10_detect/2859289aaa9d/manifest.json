@@ -1,0 +1,19 @@
+{
+  "stage": "10_detect",
+  "config": {
+    "eval_split": "dev"
+  },
+  "config_hash": "8b2e25c92542",
+  "git_sha": "9ff2ecb4cd1471523b8ffb89d2f36323e8572617",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-09T20:34:33+0000"
+}

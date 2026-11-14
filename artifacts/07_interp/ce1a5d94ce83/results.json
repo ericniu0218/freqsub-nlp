@@ -1,0 +1,64 @@
+{
+  "k": 3,
+  "eval_split": "test",
+  "top_components": [
+    "L13.attn",
+    "L15.attn",
+    "L12.mlp"
+  ],
+  "dev_mean_push": {
+    "L13.attn": -0.6262,
+    "L15.attn": -0.4905,
+    "L12.mlp": -0.4612,
+    "L12.attn": -0.4254,
+    "L13.mlp": -0.3585,
+    "L14.attn": -0.1709,
+    "L10.attn": -0.1298,
+    "L11.attn": -0.1065,
+    "L7.attn": -0.0641,
+    "L8.attn": -0.0513,
+    "L2.mlp": -0.0482,
+    "L1.mlp": -0.0424,
+    "L3.mlp": -0.0195,
+    "L6.attn": -0.0194,
+    "L9.mlp": -0.0184,
+    "L5.mlp": -0.0124,
+    "L0.attn": -0.0118,
+    "L1.attn": -0.0078,
+    "L7.mlp": 0.0072,
+    "L6.mlp": 0.008,
+    "L10.mlp": 0.016,
+    "L4.attn": 0.0186,
+    "L11.mlp": 0.0205,
+    "L4.mlp": 0.0264,
+    "L0.mlp": 0.0276,
+    "L2.attn": 0.0278,
+    "L9.attn": 0.0279,
+    "L3.attn": 0.0303,
+    "L8.mlp": 0.0317,
+    "L5.attn": 0.0338,
+    "L14.mlp": 0.0676,
+    "L15.mlp": 0.4447
+  },
+  "ablate_none": {
+    "flip_rate": 0.0,
+    "n_wrong": 168,
+    "collateral": 0.0,
+    "n_right": 319
+  },
+  "ablate_top": {
+    "flip_rate": 0.11904761904761904,
+    "n_wrong": 168,
+    "collateral": 0.12539184952978055,
+    "n_right": 319
+  },
+  "ablate_random": {
+    "flip_rate_mean": 0.04017857142857143,
+    "flip_rate_p95": 0.087202380952381,
+    "collateral_mean": 0.03322884012539185
+  },
+  "implicated": false,
+  "baseline_note": "full-answer pairwise evaluation; sets are baseline-consistent, so the no-ablation control is 0",
+  "first_token_case_share_dev": 1.0,
+  "dla_check_max_abs_error": 4.76837158203125e-06
+}

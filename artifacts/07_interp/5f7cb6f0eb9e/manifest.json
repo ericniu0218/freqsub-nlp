@@ -1,0 +1,21 @@
+{
+  "stage": "07_interp",
+  "config": {
+    "rev": "stage1-step1907359-tokens4001B",
+    "k": 3,
+    "eval_split": "dev"
+  },
+  "config_hash": "15f00c428efb",
+  "git_sha": "16a8fdac2fcd3e18dd3497291b02d6232ef196b1",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-09T21:04:26+0000"
+}

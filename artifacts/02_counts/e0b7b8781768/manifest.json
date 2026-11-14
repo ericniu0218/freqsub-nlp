@@ -1,0 +1,40 @@
+{
+  "stage": "02_counts",
+  "config": {
+    "data": {
+      "popqa_path": "data_raw/popqa_test.tsv",
+      "relations": [
+        "country"
+      ],
+      "max_aliases": 5,
+      "dev_frac": 0.2
+    },
+    "seed": 0,
+    "counts": {
+      "index": "v4_olmo-mix-1124_llama",
+      "contexts_per_subject": 50,
+      "max_disp_len": 200
+    },
+    "limit_subjects": 5
+  },
+  "config_hash": "e0b7b8781768",
+  "git_sha": "unknown",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-09T08:14:06+0000",
+  "client_stats": {
+    "cache_hits": 378,
+    "api_calls": 288,
+    "retries": 14,
+    "throttle_pauses": 5
+  },
+  "cache_entries": 650
+}

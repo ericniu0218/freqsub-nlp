@@ -1,0 +1,30 @@
+{
+  "stage": "02b_contexts",
+  "config": {
+    "source": "560699d8cf83",
+    "seed": 0,
+    "index": "v4_olmo-mix-1124_llama",
+    "k": 50,
+    "max_disp_len": 200
+  },
+  "config_hash": "966ae51388dd",
+  "git_sha": "4fa4fa461050eeabe988dd2886f858933f3f8ffa",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v338-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-10T06:08:21+0000",
+  "client_stats": {
+    "cache_hits": 2081,
+    "api_calls": 2356,
+    "retries": 0,
+    "throttle_pauses": 0
+  },
+  "n_subjects": 837
+}

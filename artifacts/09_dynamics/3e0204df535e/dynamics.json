@@ -1,0 +1,191 @@
+[
+  {
+    "revision": "stage1-step10000-tokens21B",
+    "tokens_B": 21,
+    "frac_corpus": 0.00458968670527633,
+    "n": 460,
+    "accuracy": 0.45652173913043476,
+    "beta_log_cooc": 0.342,
+    "beta_gold_x_log_cooc": -0.0774,
+    "beta_log_freq": 0.4492,
+    "beta_log_opop": 0.7624,
+    "beta_n_tokens": -0.3017,
+    "beta_is_gold": 3.6552,
+    "ci_log_cooc": [
+      0.2609,
+      0.4232
+    ],
+    "ci_log_freq": [
+      0.2014,
+      0.6969
+    ]
+  },
+  {
+    "revision": "stage1-step23100-tokens49B",
+    "tokens_B": 49,
+    "frac_corpus": 0.010709268978978104,
+    "n": 460,
+    "accuracy": 0.5043478260869565,
+    "beta_log_cooc": 0.3472,
+    "beta_gold_x_log_cooc": -0.0679,
+    "beta_log_freq": 0.6708,
+    "beta_log_opop": 0.6092,
+    "beta_n_tokens": -0.5352,
+    "beta_is_gold": 3.9729,
+    "ci_log_cooc": [
+      0.2651,
+      0.4294
+    ],
+    "ci_log_freq": [
+      0.4117,
+      0.93
+    ]
+  },
+  {
+    "revision": "stage1-step50000-tokens105B",
+    "tokens_B": 105,
+    "frac_corpus": 0.022948433526381654,
+    "n": 460,
+    "accuracy": 0.5434782608695652,
+    "beta_log_cooc": 0.3479,
+    "beta_gold_x_log_cooc": -0.0898,
+    "beta_log_freq": 0.7194,
+    "beta_log_opop": 0.8413,
+    "beta_n_tokens": -0.4793,
+    "beta_is_gold": 4.2476,
+    "ci_log_cooc": [
+      0.263,
+      0.4328
+    ],
+    "ci_log_freq": [
+      0.439,
+      0.9998
+    ]
+  },
+  {
+    "revision": "stage1-step100000-tokens210B",
+    "tokens_B": 210,
+    "frac_corpus": 0.04589686705276331,
+    "n": 460,
+    "accuracy": 0.5934782608695652,
+    "beta_log_cooc": 0.3932,
+    "beta_gold_x_log_cooc": -0.0831,
+    "beta_log_freq": 0.7073,
+    "beta_log_opop": 0.4671,
+    "beta_n_tokens": -0.3095,
+    "beta_is_gold": 4.3186,
+    "ci_log_cooc": [
+      0.3056,
+      0.4808
+    ],
+    "ci_log_freq": [
+      0.4376,
+      0.9769
+    ]
+  },
+  {
+    "revision": "stage1-step190000-tokens399B",
+    "tokens_B": 399,
+    "frac_corpus": 0.08720404740025028,
+    "n": 460,
+    "accuracy": 0.5956521739130435,
+    "beta_log_cooc": 0.3695,
+    "beta_gold_x_log_cooc": -0.0719,
+    "beta_log_freq": 0.4073,
+    "beta_log_opop": 0.5887,
+    "beta_n_tokens": -0.0705,
+    "beta_is_gold": 4.2095,
+    "ci_log_cooc": [
+      0.2783,
+      0.4607
+    ],
+    "ci_log_freq": [
+      0.1515,
+      0.6632
+    ]
+  },
+  {
+    "revision": "stage1-step380000-tokens797B",
+    "tokens_B": 797,
+    "frac_corpus": 0.1741895382907255,
+    "n": 460,
+    "accuracy": 0.5673913043478261,
+    "beta_log_cooc": 0.3723,
+    "beta_gold_x_log_cooc": -0.0917,
+    "beta_log_freq": 0.3989,
+    "beta_log_opop": 0.7009,
+    "beta_n_tokens": -0.4873,
+    "beta_is_gold": 4.41,
+    "ci_log_cooc": [
+      0.2881,
+      0.4565
+    ],
+    "ci_log_freq": [
+      0.1365,
+      0.6614
+    ]
+  },
+  {
+    "revision": "stage1-step760000-tokens1594B",
+    "tokens_B": 1594,
+    "frac_corpus": 0.348379076581451,
+    "n": 460,
+    "accuracy": 0.5934782608695652,
+    "beta_log_cooc": 0.3532,
+    "beta_gold_x_log_cooc": -0.0668,
+    "beta_log_freq": 0.3437,
+    "beta_log_opop": 0.4759,
+    "beta_n_tokens": -0.0875,
+    "beta_is_gold": 4.2266,
+    "ci_log_cooc": [
+      0.2624,
+      0.4439
+    ],
+    "ci_log_freq": [
+      0.0956,
+      0.5918
+    ]
+  },
+  {
+    "revision": "stage1-step1530000-tokens3209B",
+    "tokens_B": 3209,
+    "frac_corpus": 0.7013478398681784,
+    "n": 460,
+    "accuracy": 0.6065217391304348,
+    "beta_log_cooc": 0.4402,
+    "beta_gold_x_log_cooc": -0.086,
+    "beta_log_freq": 0.3022,
+    "beta_log_opop": 0.745,
+    "beta_n_tokens": -0.4695,
+    "beta_is_gold": 4.4332,
+    "ci_log_cooc": [
+      0.3524,
+      0.528
+    ],
+    "ci_log_freq": [
+      0.0333,
+      0.5712
+    ]
+  },
+  {
+    "revision": "stage1-step1907359-tokens4001B",
+    "tokens_B": 4001,
+    "frac_corpus": 0.8744445956100285,
+    "n": 460,
+    "accuracy": 0.6521739130434783,
+    "beta_log_cooc": 0.4375,
+    "beta_gold_x_log_cooc": -0.0769,
+    "beta_log_freq": 0.3277,
+    "beta_log_opop": 0.7674,
+    "beta_n_tokens": -0.0843,
+    "beta_is_gold": 4.4498,
+    "ci_log_cooc": [
+      0.341,
+      0.5341
+    ],
+    "ci_log_freq": [
+      0.0535,
+      0.6018
+    ]
+  }
+]

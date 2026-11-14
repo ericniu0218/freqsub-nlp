@@ -1,0 +1,19 @@
+{
+  "stage": "09_dynamics",
+  "config": {
+    "split": "test"
+  },
+  "config_hash": "0546ad4807dd",
+  "git_sha": "856ae8d09edfde241f66b2bbbe303d41cc091f48",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v338-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-10T11:28:53+0000"
+}

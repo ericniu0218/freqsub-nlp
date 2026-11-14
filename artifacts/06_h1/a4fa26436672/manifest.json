@@ -1,0 +1,20 @@
+{
+  "stage": "06_h1",
+  "config": {
+    "split": "dev"
+  },
+  "config_hash": "d059f9656437",
+  "git_sha": "1e4a1329695a045a273159723667220bdef6cf2c",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-09T22:43:55+0000",
+  "n_rows": 77486
+}

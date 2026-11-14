@@ -1,0 +1,20 @@
+{
+  "stage": "08_calibrate",
+  "config": {
+    "rev": "stage1-step1907359-tokens4001B",
+    "eval": "test"
+  },
+  "config_hash": "d517ea433620",
+  "git_sha": "cd1d1ac1c68b1c416165e76db91f309abc0cf133",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v338-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-10T04:26:55+0000"
+}

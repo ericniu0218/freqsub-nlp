@@ -1,0 +1,876 @@
+{
+  "split": "dev",
+  "primary": {
+    "label": "PRIMARY: qa, non-ambiguous, N_s>0",
+    "n_questions": 68,
+    "accuracy": 0.6323529411764706,
+    "clogit": {
+      "log_cooc": {
+        "coef": 0.6189,
+        "se": 0.1213,
+        "z": 5.1023,
+        "p": 0.0,
+        "ci_low": 0.3812,
+        "ci_high": 0.8567
+      },
+      "gold_x_log_cooc": {
+        "coef": -0.16,
+        "se": 0.0425,
+        "z": -3.7679,
+        "p": 0.0002,
+        "ci_low": -0.2432,
+        "ci_high": -0.0768
+      },
+      "log_freq": {
+        "coef": 0.7987,
+        "se": 0.4409,
+        "z": 1.8114,
+        "p": 0.0701,
+        "ci_low": -0.0655,
+        "ci_high": 1.6629
+      },
+      "log_opop": {
+        "coef": 0.5499,
+        "se": 0.3562,
+        "z": 1.5439,
+        "p": 0.1226,
+        "ci_low": -0.1482,
+        "ci_high": 1.248
+      },
+      "n_tokens": {
+        "coef": 0.1516,
+        "se": 0.1869,
+        "z": 0.8108,
+        "p": 0.4175,
+        "ci_low": -0.2148,
+        "ci_high": 0.518
+      },
+      "is_gold": {
+        "coef": 4.918,
+        "se": 0.4479,
+        "z": 10.979,
+        "p": 0.0,
+        "ci_low": 4.04,
+        "ci_high": 5.7959
+      }
+    },
+    "clogit_info": {
+      "n_groups": 68,
+      "n_rows": 7208,
+      "converged": true
+    },
+    "primary_beta": {
+      "feature": "log_cooc",
+      "coef": 0.6189249234434158,
+      "ci": [
+        0.38117312728108516,
+        0.8566767196057463
+      ],
+      "verdict": "supported"
+    },
+    "rank_test": {
+      "n_wrong": 25,
+      "mean_rank": 0.7188461538461539,
+      "null_mean": 0.50061625,
+      "p_value": 9.999000099990002e-05,
+      "ci_low": 0.6234615384615385,
+      "ci_high": 0.8153846153846154
+    },
+    "within_question_ols": {
+      "log_cooc": {
+        "coef": 0.1867,
+        "se": 0.0384,
+        "p": 0.0,
+        "ci_low": 0.1113,
+        "ci_high": 0.262
+      },
+      "gold_x_log_cooc": {
+        "coef": -0.0921,
+        "se": 0.0501,
+        "p": 0.0663,
+        "ci_low": -0.1903,
+        "ci_high": 0.0062
+      },
+      "log_freq": {
+        "coef": 0.5411,
+        "se": 0.0481,
+        "p": 0.0,
+        "ci_low": 0.4468,
+        "ci_high": 0.6354
+      },
+      "log_opop": {
+        "coef": 1.0411,
+        "se": 0.0368,
+        "p": 0.0,
+        "ci_low": 0.9689,
+        "ci_high": 1.1133
+      },
+      "n_tokens": {
+        "coef": -0.9955,
+        "se": 0.0361,
+        "p": 0.0,
+        "ci_low": -1.0662,
+        "ci_high": -0.9248
+      },
+      "is_gold": {
+        "coef": 5.9838,
+        "se": 0.5285,
+        "p": 0.0,
+        "ci_low": 4.948,
+        "ci_high": 7.0196
+      }
+    }
+  },
+  "robustness": {
+    "incl_ambiguous": {
+      "label": "including ambiguous subjects",
+      "n_questions": 68,
+      "accuracy": 0.6323529411764706,
+      "clogit": {
+        "log_cooc": {
+          "coef": 0.6189,
+          "se": 0.1213,
+          "z": 5.1023,
+          "p": 0.0,
+          "ci_low": 0.3812,
+          "ci_high": 0.8567
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.16,
+          "se": 0.0425,
+          "z": -3.7679,
+          "p": 0.0002,
+          "ci_low": -0.2432,
+          "ci_high": -0.0768
+        },
+        "log_freq": {
+          "coef": 0.7987,
+          "se": 0.4409,
+          "z": 1.8114,
+          "p": 0.0701,
+          "ci_low": -0.0655,
+          "ci_high": 1.6629
+        },
+        "log_opop": {
+          "coef": 0.5499,
+          "se": 0.3562,
+          "z": 1.5439,
+          "p": 0.1226,
+          "ci_low": -0.1482,
+          "ci_high": 1.248
+        },
+        "n_tokens": {
+          "coef": 0.1516,
+          "se": 0.1869,
+          "z": 0.8108,
+          "p": 0.4175,
+          "ci_low": -0.2148,
+          "ci_high": 0.518
+        },
+        "is_gold": {
+          "coef": 4.918,
+          "se": 0.4479,
+          "z": 10.979,
+          "p": 0.0,
+          "ci_low": 4.04,
+          "ci_high": 5.7959
+        }
+      },
+      "clogit_info": {
+        "n_groups": 68,
+        "n_rows": 7208,
+        "converged": true
+      },
+      "primary_beta": {
+        "feature": "log_cooc",
+        "coef": 0.6189249234434158,
+        "ci": [
+          0.38117312728108516,
+          0.8566767196057463
+        ],
+        "verdict": "supported"
+      },
+      "rank_test": {
+        "n_wrong": 25,
+        "mean_rank": 0.7188461538461539,
+        "null_mean": 0.50061625,
+        "p_value": 9.999000099990002e-05,
+        "ci_low": 0.6234615384615385,
+        "ci_high": 0.8153846153846154
+      },
+      "within_question_ols": {
+        "log_cooc": {
+          "coef": 0.1867,
+          "se": 0.0384,
+          "p": 0.0,
+          "ci_low": 0.1113,
+          "ci_high": 0.262
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.0921,
+          "se": 0.0501,
+          "p": 0.0663,
+          "ci_low": -0.1903,
+          "ci_high": 0.0062
+        },
+        "log_freq": {
+          "coef": 0.5411,
+          "se": 0.0481,
+          "p": 0.0,
+          "ci_low": 0.4468,
+          "ci_high": 0.6354
+        },
+        "log_opop": {
+          "coef": 1.0411,
+          "se": 0.0368,
+          "p": 0.0,
+          "ci_low": 0.9689,
+          "ci_high": 1.1133
+        },
+        "n_tokens": {
+          "coef": -0.9955,
+          "se": 0.0361,
+          "p": 0.0,
+          "ci_low": -1.0662,
+          "ci_high": -0.9248
+        },
+        "is_gold": {
+          "coef": 5.9838,
+          "se": 0.5285,
+          "p": 0.0,
+          "ci_low": 4.948,
+          "ci_high": 7.0196
+        }
+      }
+    },
+    "incl_label_ambiguous": {
+      "label": "including label-ambiguous golds",
+      "n_questions": 69,
+      "accuracy": 0.6231884057971014,
+      "clogit": {
+        "log_cooc": {
+          "coef": 0.6303,
+          "se": 0.1207,
+          "z": 5.2223,
+          "p": 0.0,
+          "ci_low": 0.3938,
+          "ci_high": 0.8669
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.1615,
+          "se": 0.0422,
+          "z": -3.8317,
+          "p": 0.0001,
+          "ci_low": -0.2442,
+          "ci_high": -0.0789
+        },
+        "log_freq": {
+          "coef": 0.8521,
+          "se": 0.438,
+          "z": 1.9457,
+          "p": 0.0517,
+          "ci_low": -0.0063,
+          "ci_high": 1.7105
+        },
+        "log_opop": {
+          "coef": 0.5286,
+          "se": 0.3516,
+          "z": 1.5034,
+          "p": 0.1327,
+          "ci_low": -0.1605,
+          "ci_high": 1.2178
+        },
+        "n_tokens": {
+          "coef": 0.1558,
+          "se": 0.1854,
+          "z": 0.8406,
+          "p": 0.4006,
+          "ci_low": -0.2075,
+          "ci_high": 0.5192
+        },
+        "is_gold": {
+          "coef": 4.9405,
+          "se": 0.4505,
+          "z": 10.9662,
+          "p": 0.0,
+          "ci_low": 4.0575,
+          "ci_high": 5.8235
+        }
+      },
+      "clogit_info": {
+        "n_groups": 69,
+        "n_rows": 7314,
+        "converged": true
+      },
+      "primary_beta": {
+        "feature": "log_cooc",
+        "coef": 0.6303250138135467,
+        "ci": [
+          0.39376139002469857,
+          0.8668886376023948
+        ],
+        "verdict": "supported"
+      },
+      "rank_test": {
+        "n_wrong": 26,
+        "mean_rank": 0.7296597633136094,
+        "null_mean": 0.5003698779585798,
+        "p_value": 9.999000099990002e-05,
+        "ci_low": 0.6338664940828401,
+        "ci_high": 0.8210059171597633
+      },
+      "within_question_ols": {
+        "log_cooc": {
+          "coef": 0.1874,
+          "se": 0.0384,
+          "p": 0.0,
+          "ci_low": 0.1122,
+          "ci_high": 0.2627
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.095,
+          "se": 0.049,
+          "p": 0.0525,
+          "ci_low": -0.191,
+          "ci_high": 0.001
+        },
+        "log_freq": {
+          "coef": 0.5387,
+          "se": 0.0474,
+          "p": 0.0,
+          "ci_low": 0.4457,
+          "ci_high": 0.6316
+        },
+        "log_opop": {
+          "coef": 1.0468,
+          "se": 0.0368,
+          "p": 0.0,
+          "ci_low": 0.9746,
+          "ci_high": 1.119
+        },
+        "n_tokens": {
+          "coef": -0.9966,
+          "se": 0.0356,
+          "p": 0.0,
+          "ci_low": -1.0663,
+          "ci_high": -0.9269
+        },
+        "is_gold": {
+          "coef": 6.0229,
+          "se": 0.5143,
+          "p": 0.0,
+          "ci_low": 5.015,
+          "ci_high": 7.0309
+        }
+      }
+    },
+    "amb_tercile_0": {
+      "label": "ambiguity tercile 0",
+      "n_questions": 23,
+      "accuracy": 0.6086956521739131,
+      "note": "too few questions"
+    },
+    "amb_tercile_1": {
+      "label": "ambiguity tercile 1",
+      "n_questions": 23,
+      "accuracy": 0.7391304347826086,
+      "note": "too few questions"
+    },
+    "amb_tercile_2": {
+      "label": "ambiguity tercile 2",
+      "n_questions": 23,
+      "accuracy": 0.5217391304347826,
+      "note": "too few questions"
+    },
+    "excl_gold_in_demos": {
+      "label": "excluding gold-in-demos",
+      "n_questions": 44,
+      "accuracy": 0.5909090909090909,
+      "clogit": {
+        "log_cooc": {
+          "coef": 0.3984,
+          "se": 0.1501,
+          "z": 2.6552,
+          "p": 0.0079,
+          "ci_low": 0.1043,
+          "ci_high": 0.6926
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.1579,
+          "se": 0.0559,
+          "z": -2.8228,
+          "p": 0.0048,
+          "ci_low": -0.2675,
+          "ci_high": -0.0483
+        },
+        "log_freq": {
+          "coef": 0.7345,
+          "se": 0.4892,
+          "z": 1.5014,
+          "p": 0.1332,
+          "ci_low": -0.2243,
+          "ci_high": 1.6933
+        },
+        "log_opop": {
+          "coef": 0.6717,
+          "se": 0.4049,
+          "z": 1.659,
+          "p": 0.0971,
+          "ci_low": -0.1218,
+          "ci_high": 1.4652
+        },
+        "n_tokens": {
+          "coef": 0.162,
+          "se": 0.2134,
+          "z": 0.7589,
+          "p": 0.4479,
+          "ci_low": -0.2563,
+          "ci_high": 0.5802
+        },
+        "is_gold": {
+          "coef": 5.409,
+          "se": 0.6165,
+          "z": 8.7739,
+          "p": 0.0,
+          "ci_low": 4.2007,
+          "ci_high": 6.6172
+        }
+      },
+      "clogit_info": {
+        "n_groups": 44,
+        "n_rows": 4664,
+        "converged": true
+      },
+      "primary_beta": {
+        "feature": "log_cooc",
+        "coef": 0.39844083895038196,
+        "ci": [
+          0.10432274450590673,
+          0.6925589333948572
+        ],
+        "verdict": "supported"
+      },
+      "rank_test": {
+        "n_wrong": 18,
+        "mean_rank": 0.6784188034188035,
+        "null_mean": 0.5002914529914532,
+        "p_value": 9.999000099990002e-05,
+        "ci_low": 0.5694310897435897,
+        "ci_high": 0.7911458333333333
+      },
+      "within_question_ols": {
+        "log_cooc": {
+          "coef": 0.152,
+          "se": 0.0538,
+          "p": 0.0048,
+          "ci_low": 0.0465,
+          "ci_high": 0.2575
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.0909,
+          "se": 0.0788,
+          "p": 0.2489,
+          "ci_low": -0.2453,
+          "ci_high": 0.0636
+        },
+        "log_freq": {
+          "coef": 0.5243,
+          "se": 0.0623,
+          "p": 0.0,
+          "ci_low": 0.4022,
+          "ci_high": 0.6464
+        },
+        "log_opop": {
+          "coef": 1.0684,
+          "se": 0.0499,
+          "p": 0.0,
+          "ci_low": 0.9706,
+          "ci_high": 1.1661
+        },
+        "n_tokens": {
+          "coef": -0.9932,
+          "se": 0.0471,
+          "p": 0.0,
+          "ci_low": -1.0856,
+          "ci_high": -0.9009
+        },
+        "is_gold": {
+          "coef": 5.8195,
+          "se": 0.8524,
+          "p": 0.0,
+          "ci_low": 4.1489,
+          "ci_high": 7.4901
+        }
+      }
+    },
+    "p_hat_feature": {
+      "label": "p_hat instead of log_cooc",
+      "n_questions": 68,
+      "accuracy": 0.6323529411764706,
+      "clogit": {
+        "p_hat_f": {
+          "coef": 0.2023,
+          "se": 0.074,
+          "z": 2.7359,
+          "p": 0.0062,
+          "ci_low": 0.0574,
+          "ci_high": 0.3473
+        },
+        "gold_x_p_hat": {
+          "coef": -0.1324,
+          "se": 0.0685,
+          "z": -1.9329,
+          "p": 0.0532,
+          "ci_low": -0.2666,
+          "ci_high": 0.0019
+        },
+        "log_freq": {
+          "coef": 0.959,
+          "se": 0.4169,
+          "z": 2.3004,
+          "p": 0.0214,
+          "ci_low": 0.1419,
+          "ci_high": 1.7761
+        },
+        "log_opop": {
+          "coef": 0.5138,
+          "se": 0.3443,
+          "z": 1.4923,
+          "p": 0.1356,
+          "ci_low": -0.161,
+          "ci_high": 1.1887
+        },
+        "n_tokens": {
+          "coef": 0.1153,
+          "se": 0.1893,
+          "z": 0.6089,
+          "p": 0.5426,
+          "ci_low": -0.2558,
+          "ci_high": 0.4864
+        },
+        "is_gold": {
+          "coef": 4.2017,
+          "se": 0.401,
+          "z": 10.4774,
+          "p": 0.0,
+          "ci_low": 3.4157,
+          "ci_high": 4.9877
+        }
+      },
+      "clogit_info": {
+        "n_groups": 68,
+        "n_rows": 7208,
+        "converged": true
+      },
+      "primary_beta": {
+        "feature": "p_hat_f",
+        "coef": 0.2023489777079479,
+        "ci": [
+          0.057390688466572304,
+          0.3473072669493235
+        ],
+        "verdict": "supported"
+      },
+      "rank_test": {
+        "n_wrong": 25,
+        "mean_rank": 0.7188461538461539,
+        "null_mean": 0.50061625,
+        "p_value": 9.999000099990002e-05,
+        "ci_low": 0.6234615384615385,
+        "ci_high": 0.8153846153846154
+      },
+      "within_question_ols": {
+        "p_hat_f": {
+          "coef": 0.3611,
+          "se": 0.1037,
+          "p": 0.0005,
+          "ci_low": 0.1579,
+          "ci_high": 0.5644
+        },
+        "gold_x_p_hat": {
+          "coef": -0.2952,
+          "se": 0.113,
+          "p": 0.009,
+          "ci_low": -0.5167,
+          "ci_high": -0.0737
+        },
+        "log_freq": {
+          "coef": 0.5598,
+          "se": 0.0477,
+          "p": 0.0,
+          "ci_low": 0.4664,
+          "ci_high": 0.6532
+        },
+        "log_opop": {
+          "coef": 1.0434,
+          "se": 0.0366,
+          "p": 0.0,
+          "ci_low": 0.9717,
+          "ci_high": 1.115
+        },
+        "n_tokens": {
+          "coef": -0.9875,
+          "se": 0.0366,
+          "p": 0.0,
+          "ci_low": -1.0593,
+          "ci_high": -0.9158
+        },
+        "is_gold": {
+          "coef": 5.5488,
+          "se": 0.4648,
+          "p": 0.0,
+          "ci_low": 4.6378,
+          "ci_high": 6.4599
+        }
+      }
+    },
+    "length_normalized_choice": {
+      "label": "length-normalized choice rule",
+      "n_questions": 68,
+      "accuracy": 0.6323529411764706,
+      "clogit": {
+        "log_cooc": {
+          "coef": 0.6391,
+          "se": 0.1561,
+          "z": 4.0957,
+          "p": 0.0,
+          "ci_low": 0.3333,
+          "ci_high": 0.945
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.1685,
+          "se": 0.053,
+          "z": -3.1781,
+          "p": 0.0015,
+          "ci_low": -0.2724,
+          "ci_high": -0.0646
+        },
+        "log_freq": {
+          "coef": 1.773,
+          "se": 0.4618,
+          "z": 3.8393,
+          "p": 0.0001,
+          "ci_low": 0.8679,
+          "ci_high": 2.6781
+        },
+        "log_opop": {
+          "coef": -0.2191,
+          "se": 0.2884,
+          "z": -0.7597,
+          "p": 0.4474,
+          "ci_low": -0.7845,
+          "ci_high": 0.3462
+        },
+        "n_tokens": {
+          "coef": 1.11,
+          "se": 0.1507,
+          "z": 7.3657,
+          "p": 0.0,
+          "ci_low": 0.8146,
+          "ci_high": 1.4054
+        },
+        "is_gold": {
+          "coef": 5.5695,
+          "se": 0.6132,
+          "z": 9.0826,
+          "p": 0.0,
+          "ci_low": 4.3676,
+          "ci_high": 6.7713
+        }
+      },
+      "clogit_info": {
+        "n_groups": 68,
+        "n_rows": 7208,
+        "converged": true
+      },
+      "primary_beta": {
+        "feature": "log_cooc",
+        "coef": 0.6391413639037392,
+        "ci": [
+          0.33328466304797194,
+          0.9449980647595064
+        ],
+        "verdict": "supported"
+      },
+      "rank_test": {
+        "n_wrong": 25,
+        "mean_rank": 0.6590384615384616,
+        "null_mean": 0.500094846153846,
+        "p_value": 9.999000099990002e-05,
+        "ci_low": 0.5705721153846154,
+        "ci_high": 0.7598125
+      },
+      "within_question_ols": {
+        "log_cooc": {
+          "coef": 0.1867,
+          "se": 0.0384,
+          "p": 0.0,
+          "ci_low": 0.1113,
+          "ci_high": 0.262
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.0921,
+          "se": 0.0501,
+          "p": 0.0663,
+          "ci_low": -0.1903,
+          "ci_high": 0.0062
+        },
+        "log_freq": {
+          "coef": 0.5411,
+          "se": 0.0481,
+          "p": 0.0,
+          "ci_low": 0.4468,
+          "ci_high": 0.6354
+        },
+        "log_opop": {
+          "coef": 1.0411,
+          "se": 0.0368,
+          "p": 0.0,
+          "ci_low": 0.9689,
+          "ci_high": 1.1133
+        },
+        "n_tokens": {
+          "coef": -0.9955,
+          "se": 0.0361,
+          "p": 0.0,
+          "ci_low": -1.0662,
+          "ci_high": -0.9248
+        },
+        "is_gold": {
+          "coef": 5.9838,
+          "se": 0.5285,
+          "p": 0.0,
+          "ci_low": 4.948,
+          "ci_high": 7.0196
+        }
+      }
+    },
+    "template_instructed": {
+      "label": "template instructed",
+      "n_questions": 15,
+      "accuracy": 0.8,
+      "note": "too few questions"
+    },
+    "template_question_answer": {
+      "label": "template question_answer",
+      "n_questions": 68,
+      "accuracy": 0.6029411764705882,
+      "clogit": {
+        "log_cooc": {
+          "coef": 0.6775,
+          "se": 0.119,
+          "z": 5.6917,
+          "p": 0.0,
+          "ci_low": 0.4442,
+          "ci_high": 0.9108
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.1446,
+          "se": 0.0416,
+          "z": -3.4778,
+          "p": 0.0005,
+          "ci_low": -0.2261,
+          "ci_high": -0.0631
+        },
+        "log_freq": {
+          "coef": 0.6441,
+          "se": 0.4279,
+          "z": 1.5053,
+          "p": 0.1322,
+          "ci_low": -0.1945,
+          "ci_high": 1.4826
+        },
+        "log_opop": {
+          "coef": 0.6488,
+          "se": 0.351,
+          "z": 1.8483,
+          "p": 0.0646,
+          "ci_low": -0.0392,
+          "ci_high": 1.3369
+        },
+        "n_tokens": {
+          "coef": 0.0938,
+          "se": 0.1861,
+          "z": 0.504,
+          "p": 0.6143,
+          "ci_low": -0.2709,
+          "ci_high": 0.4584
+        },
+        "is_gold": {
+          "coef": 4.6102,
+          "se": 0.4305,
+          "z": 10.7082,
+          "p": 0.0,
+          "ci_low": 3.7663,
+          "ci_high": 5.454
+        }
+      },
+      "clogit_info": {
+        "n_groups": 68,
+        "n_rows": 7208,
+        "converged": true
+      },
+      "primary_beta": {
+        "feature": "log_cooc",
+        "coef": 0.6774936392303694,
+        "ci": [
+          0.4441961610565407,
+          0.9107911174041982
+        ],
+        "verdict": "supported"
+      },
+      "rank_test": {
+        "n_wrong": 27,
+        "mean_rank": 0.721153846153846,
+        "null_mean": 0.5001722934472935,
+        "p_value": 9.999000099990002e-05,
+        "ci_low": 0.6305021367521367,
+        "ci_high": 0.8092993233618233
+      },
+      "within_question_ols": {
+        "log_cooc": {
+          "coef": 0.168,
+          "se": 0.039,
+          "p": 0.0,
+          "ci_low": 0.0915,
+          "ci_high": 0.2444
+        },
+        "gold_x_log_cooc": {
+          "coef": -0.0898,
+          "se": 0.0507,
+          "p": 0.0767,
+          "ci_low": -0.1892,
+          "ci_high": 0.0096
+        },
+        "log_freq": {
+          "coef": 0.5141,
+          "se": 0.0481,
+          "p": 0.0,
+          "ci_low": 0.4198,
+          "ci_high": 0.6084
+        },
+        "log_opop": {
+          "coef": 1.0656,
+          "se": 0.0365,
+          "p": 0.0,
+          "ci_low": 0.9941,
+          "ci_high": 1.1372
+        },
+        "n_tokens": {
+          "coef": -1.0314,
+          "se": 0.0353,
+          "p": 0.0,
+          "ci_low": -1.1005,
+          "ci_high": -0.9622
+        },
+        "is_gold": {
+          "coef": 5.6231,
+          "se": 0.5236,
+          "p": 0.0,
+          "ci_low": 4.5969,
+          "ci_high": 6.6494
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "stage": "04_scores",
+  "config": {
+    "data": {
+      "popqa_path": "data_raw/popqa_test.tsv",
+      "relations": [
+        "country"
+      ],
+      "max_aliases": 5,
+      "dev_frac": 0.2
+    },
+    "seed": 0,
+    "model": {
+      "name": "allenai/OLMo-2-0425-1B",
+      "revision": "stage1-step100000-tokens210B",
+      "dtype": "float32"
+    },
+    "templates": [
+      "qa"
+    ],
+    "limit": null
+  },
+  "config_hash": "d9a93dbdf9c0",
+  "git_sha": "4fa4fa461050eeabe988dd2886f858933f3f8ffa",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v338-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-10T06:07:17+0000",
+  "questions_scored": 238
+}

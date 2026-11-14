@@ -1,0 +1,35 @@
+{
+  "stage": "01_data",
+  "config": {
+    "data": {
+      "popqa_path": "data_raw/popqa_test.tsv",
+      "relations": [
+        "country"
+      ],
+      "max_aliases": 5,
+      "dev_frac": 0.2
+    },
+    "seed": 0
+  },
+  "config_hash": "42c2c103ce43",
+  "git_sha": "unknown",
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.15.0",
+    "transformers": "5.22.2",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "statsmodels": "0.15.0",
+    "requests": "2.34.2"
+  },
+  "written_at": "2026-11-09T08:01:08+0000",
+  "summary": {
+    "country": {
+      "questions": 838,
+      "subjects": 837,
+      "pool_size": 107,
+      "dev_questions": 170
+    }
+  }
+}
