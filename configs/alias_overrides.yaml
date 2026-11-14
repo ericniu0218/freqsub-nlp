@@ -1,0 +1,16 @@
+# Manual alias review decisions for corpus search (see freqsub/data/aliases.py).
+# Format:  <relation>: { <primary entity name>: { keep: [...], drop: [...] } }
+# Reviewed 2026-11-09 from the 6 ratio_flag rows of stage 02a (country). Decisions made from alias
+# strings and corpus counts only, before any model scoring.
+country:
+  Achaemenid Empire:
+    drop: [Persia]            # "Persia" spans many eras/states; not specific to the Achaemenid Empire
+  Kingdom of Saxony:
+    drop: [Saxony]            # today mostly the German federal state
+  Kingdom of the Netherlands:
+    keep: [the Netherlands]   # everyday name for the same sovereign state
+  People's Republic of China:
+    keep: [China]             # everyday name for the same state
+  United States of America:
+    keep: [U.S.]              # case-sensitive, punctuated; unambiguous
+    drop: [America]           # also the continent(s)

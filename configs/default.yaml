@@ -1,0 +1,23 @@
+# Default experiment configuration. Override on the command line: key=value (OmegaConf dotlist).
+seed: 0
+
+data:
+  popqa_path: data_raw/popqa_test.tsv
+  relations: [country]          # MVP; later: [country, "place of birth", occupation, genre]
+  max_aliases: 5
+  dev_frac: 0.2
+
+counts:
+  # Primary pairing: OLMo-2-0425-1B stage-1 checkpoints <-> OLMo-mix-1124
+  index: v4_olmo-mix-1124_llama
+  cache_path: artifacts/cache/infinigram_v4_olmo-mix-1124_llama.sqlite
+  rate_per_s: 0.9
+  cooldown_start_s: 20         # first pause after an HTTP 403 throttle (doubles on repeats, max 600)
+  workers: 4
+  contexts_per_subject: 50      # K in the sampled-context estimator
+  max_disp_len: 200             # tokens per context window (~100 each side of the mention)
+
+model:
+  name: allenai/OLMo-2-0425-1B
+  revision: stage1-step1907359-tokens4001B   # last stage-1 checkpoint (before mid-training data)
+  dtype: float32                # Kaggle T4: float16 only if the fp16-vs-fp32 gate passes

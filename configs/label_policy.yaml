@@ -1,0 +1,9 @@
+# Label-validity policy (decided from candidate labels only, before any test-split analysis; 2026-11-09).
+country:
+  # Same sovereign state under two labels: merge into the first; the second is dropped as a candidate
+  # and any gold pointing to it is relabelled.
+  merge:
+    - [Netherlands, Kingdom of the Netherlands]
+  # Gold labels for which a modern/sovereign-country answer is defensibly correct (historical or
+  # constituent states). Excluded from the primary sample; included in a robustness check.
+  label_ambiguous_gold: [Achaemenid Empire, Kingdom of Saxony, Wales, Greenland]
