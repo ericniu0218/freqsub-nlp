@@ -1,0 +1,138 @@
+{
+  "status": "development diagnostic only; not a hypothesis test",
+  "model": "allenai/OLMo-2-0425-1B",
+  "revision": "9d3e43659f00c17e6da23cf32333afd1fc39fa1a",
+  "index": "v4_olmo-mix-1124_llama",
+  "dataset_sha256": "9a5227f41bff0e4c331d4a774d946b12f95307892b58f860a9606ef356e6089b",
+  "split_manifest_sha256": "837147232cad8d9069141026cb5f2ebdaa134b0340f6eb6d7f38740c36a1664c",
+  "pilot_question_ids": [
+    1938800,
+    5383283,
+    2604063,
+    2523400,
+    1758574,
+    5571000,
+    2873463,
+    6173288,
+    3696050,
+    980948,
+    3342671,
+    399341
+  ],
+  "n_questions": 12,
+  "n_wrong_by_single_popqa_gold": 9,
+  "n_zero_occurrence_subjects": 0,
+  "n_candidate_window_hits": 42,
+  "api_calls_this_invocation": 120,
+  "cache_hits_this_invocation": 0,
+  "chosen": [
+    {
+      "qid": 1938800,
+      "subj": "Mariví Bilbao",
+      "question": "What is Mariví Bilbao's occupation?",
+      "candidate": "journalist",
+      "is_gold": 0,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 5383283,
+      "subj": "Paris",
+      "question": "What is Paris's occupation?",
+      "candidate": "actor",
+      "is_gold": 1,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 2604063,
+      "subj": "Bala",
+      "question": "What is Bala's occupation?",
+      "candidate": "actor",
+      "is_gold": 0,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 2523400,
+      "subj": "Modou Dia",
+      "question": "What is Modou Dia's occupation?",
+      "candidate": "musician",
+      "is_gold": 0,
+      "hits": 3,
+      "sampled_windows": 7
+    },
+    {
+      "qid": 1758574,
+      "subj": "Leona Detiège",
+      "question": "What is Leona Detiège's occupation?",
+      "candidate": "journalist",
+      "is_gold": 0,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 5571000,
+      "subj": "James Cook",
+      "question": "What is James Cook's occupation?",
+      "candidate": "astronomer",
+      "is_gold": 0,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 2873463,
+      "subj": "Mariana Vicente",
+      "question": "What is Mariana Vicente's occupation?",
+      "candidate": "journalist",
+      "is_gold": 0,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 6173288,
+      "subj": "Will Smith",
+      "question": "What is Will Smith's occupation?",
+      "candidate": "actor",
+      "is_gold": 0,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 3696050,
+      "subj": "Charles Strachey, 4th Baron O'Hagan",
+      "question": "What is Charles Strachey, 4th Baron O'Hagan's occupation?",
+      "candidate": "politician",
+      "is_gold": 1,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 980948,
+      "subj": "Robert Jonckheere",
+      "question": "What is Robert Jonckheere's occupation?",
+      "candidate": "composer",
+      "is_gold": 0,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 3342671,
+      "subj": "Anjali Sudhakar",
+      "question": "What is Anjali Sudhakar's occupation?",
+      "candidate": "journalist",
+      "is_gold": 0,
+      "hits": 0,
+      "sampled_windows": 10
+    },
+    {
+      "qid": 399341,
+      "subj": "Pathit Pisitkul",
+      "question": "What is Pathit Pisitkul's occupation?",
+      "candidate": "actor",
+      "is_gold": 1,
+      "hits": 1,
+      "sampled_windows": 1
+    }
+  ]
+}

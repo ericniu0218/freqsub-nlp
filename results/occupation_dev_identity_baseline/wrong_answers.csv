@@ -1,0 +1,81 @@
+qid,subj,question,designated_gold,model_choice,predicted_wrong_name,winner_probability,loss,rank,fold
+63804,Alfred Mombert,What is Alfred Mombert's occupation?,poet,actor,journalist,0.24026095308391263,1.4260296418112661,2,1
+149790,Ilja Rosendahl,What is Ilja Rosendahl's occupation?,actor,composer,journalist,0.10135155042146317,2.2891601085053974,4,2
+164717,Giovanni Grasso,What is Giovanni Grasso's occupation?,actor,composer,journalist,0.09912534802622891,2.3113700880498946,4,2
+276787,Scooter Braun,What is Scooter Braun's occupation?,talent manager,record producer,actor,0.000454567555592592,7.696164018224731,13,0
+283289,Jörg A. Eggers,What is Jörg A. Eggers's occupation?,screenwriter,musician,actor,0.1361318764649484,1.9941311831926,3,2
+393580,Edwin H. Knopf,What is Edwin H. Knopf's occupation?,film producer,journalist,actor,0.2187618567367257,1.519771552988269,2,2
+415791,Francesco Vettori,What is Francesco Vettori's occupation?,diplomat,politician,actor,0.014859426713549458,4.2091208196056655,5,0
+488360,Carlos María Ramírez,What is Carlos María Ramírez's occupation?,politician,composer,actor,0.1670240515750042,1.7896174555282585,2,0
+650179,Gaziza Zhubanova,What is Gaziza Zhubanova's occupation?,composer,journalist,actor,0.2511501996917381,1.3817041136769506,2,0
+652177,Michael Lynton,What is Michael Lynton's occupation?,chief executive officer,actor,journalist,0.24026095308391263,1.4260296418112661,2,1
+743705,Eduard Looijenga,What is Eduard Looijenga's occupation?,mathematician,composer,actor,0.1280199304181678,2.055569320791566,3,0
+900521,Marco Ameglio,What is Marco Ameglio's occupation?,politician,actor,actor,0.4134852701556348,0.8831333875092673,1,2
+932712,Ava Deluca-Verley,What is Ava Deluca-Verley's occupation?,actor,journalist,journalist,0.35022933067972495,1.0491671085549674,1,2
+980948,Robert Jonckheere,What is Robert Jonckheere's occupation?,astronomer,composer,actor,0.06268392451697583,2.7696502515051638,5,2
+1053271,Rose Beaudet,What is Rose Beaudet's occupation?,actor,journalist,journalist,0.36087352020831914,1.0192277415732391,1,1
+1175079,Susan Soltero,What is Susan Soltero's occupation?,journalist,photographer,actor,0.0006274565873364587,7.373836072879182,20,2
+1440910,Ayumi Hamasaki,What is Ayumi Hamasaki's occupation?,lyricist,musician,journalist,0.1907267937001554,1.6569132744090638,3,0
+1505982,C. E. Webber,What is C. E. Webber's occupation?,playwright,composer,actor,0.06185415657240342,2.782975978320837,5,2
+1536600,María Elena Marqués,What is María Elena Marqués's occupation?,actor,journalist,journalist,0.35022933067972495,1.0491671085549674,1,2
+1566723,Mariángel  Carolina Ruiz Diaz,What is Mariángel  Carolina Ruiz Diaz's occupation?,model,journalist,journalist,0.3611038293387999,1.0185897461058264,1,1
+1649869,Philip Rosenberg,What is Philip Rosenberg's occupation?,production designer,actor,journalist,0.24026095308391263,1.4260296418112661,2,1
+1654794,Keiko Aizawa,What is Keiko Aizawa's occupation?,actor,journalist,journalist,0.3611038293387999,1.0185897461058264,1,1
+1658579,William Molyneux,What is William Molyneux's occupation?,astronomer,actor,journalist,0.266122462292478,1.3237986915867053,2,1
+1722071,Rhea Silvia,What is Rhea Silvia's occupation?,Vestal Virgin,model,journalist,0.00048486472264974197,7.631640628304536,40,1
+1758574,Leona Detiège,What is Leona Detiège's occupation?,politician,journalist,journalist,0.2988771776078261,1.20772256721488,1,1
+1790865,Samuel Wells Williams,What is Samuel Wells Williams's occupation?,missionary,composer,actor,0.06185415657240342,2.782975978320837,5,2
+1938800,Mariví Bilbao,What is Mariví Bilbao's occupation?,actor,journalist,journalist,0.38541408767275515,0.9534369702896619,1,0
+2083847,Kristina Lugn,What is Kristina Lugn's occupation?,playwright,journalist,actor,0.21854288824670373,1.52077299882591,2,2
+2175983,Arafan Camara,What is Arafan Camara's occupation?,politician,journalist,actor,0.22231426031738905,1.5036633110933346,2,0
+2179514,Alice,What is Alice's occupation?,singer-songwriter,librarian,actor,0.0004940984382089023,7.612775792998152,66,2
+2181704,Atsushi Kaneko,What is Atsushi Kaneko's occupation?,mangaka,actor,journalist,0.24026095308391263,1.4260296418112661,2,1
+2289441,Prince Radu of Romania,What is Prince Radu of Romania's occupation?,actor,musician,journalist,0.1857567928957114,1.6833170259548957,3,0
+2303335,Edward Francis Hutton,What is Edward Francis Hutton's occupation?,financier,actor,journalist,0.24026095308391263,1.4260296418112661,2,1
+2308304,Zhu Houren,What is Zhu Houren's occupation?,actor,politician,journalist,0.02613766615904074,3.644377857134603,4,0
+2416276,John Bell,What is John Bell's occupation?,surgeon,actor,actor,0.3764877637146305,0.9768697323642712,1,2
+2499057,Marie-France Mignal,What is Marie-France Mignal's occupation?,actor,journalist,journalist,0.36087352020831914,1.0192277415732391,1,1
+2523400,Modou Dia,What is Modou Dia's occupation?,diplomat,musician,actor,0.1495144297323018,1.9003623708606394,3,2
+2529132,Fernanda Vasconcellos,What is Fernanda Vasconcellos's occupation?,actor,journalist,journalist,0.35022933067972495,1.0491671085549674,1,2
+2604063,Bala,What is Bala's occupation?,film director,actor,journalist,0.24038300540284116,1.4255217718197812,2,1
+2675510,Johnson,What is Johnson's occupation?,composer,actor,journalist,0.2771883549851525,1.2830580219818817,2,1
+2690917,Uri Nakayama,What is Uri Nakayama's occupation?,hairdresser,actor,journalist,0.2403812573314622,1.4255290438718635,2,1
+2873463,Mariana Vicente,What is Mariana Vicente's occupation?,actor,journalist,journalist,0.38541408767275515,0.9534369702896619,1,0
+2901881,Pietro Marcenaro,What is Pietro Marcenaro's occupation?,politician,actor,actor,0.4134852701556348,0.8831333875092673,1,2
+2996750,Akimasa Nakamura,What is Akimasa Nakamura's occupation?,astronomer,actor,actor,0.4319424777695985,0.8394628529148305,1,0
+3049219,Thandiswa Mazwai,What is Thandiswa Mazwai's occupation?,songwriter,musician,journalist,0.161657308086482,1.8222765665131995,3,1
+3073609,Andreas Rüdiger,What is Andreas Rüdiger's occupation?,philosopher,musician,actor,0.10560389884251706,2.248059987534365,4,0
+3342671,Anjali Sudhakar,What is Anjali Sudhakar's occupation?,actor,journalist,journalist,0.35022933067972495,1.0491671085549674,1,2
+3592141,Felicia Chateloin,What is Felicia Chateloin's occupation?,architect,journalist,journalist,0.27434467913960925,1.2933700100898333,1,1
+3685425,Charles Combe,What is Charles Combe's occupation?,physician,politician,journalist,0.08256707208478999,2.4941443209757486,5,1
+3694493,Andrew Ure,What is Andrew Ure's occupation?,chemist,actor,journalist,0.24026095308391263,1.4260296418112661,2,1
+4032681,Tina Sloan,What is Tina Sloan's occupation?,actor,journalist,journalist,0.38541408767275515,0.9534369702896619,1,0
+4076650,Everley Gregg,What is Everley Gregg's occupation?,actor,musician,journalist,0.1857567928957114,1.6833170259548957,3,0
+4219992,George Minor,What is George Minor's occupation?,composer,actor,journalist,0.2771883549851525,1.2830580219818817,2,1
+4251288,Glenn Albrecht,What is Glenn Albrecht's occupation?,philosopher,musician,actor,0.10560389884251706,2.248059987534365,4,0
+4487088,John Jay,What is John Jay's occupation?,diplomat,politician,actor,0.014859426713549458,4.2091208196056655,5,0
+4493412,Honor Harger,What is Honor Harger's occupation?,curator,singer-songwriter,journalist,0.000500472661159462,7.59995758375891,11,1
+4674890,Jim Brown,What is Jim Brown's occupation?,radio personality,actor,journalist,0.24026095308391263,1.4260296418112661,2,1
+4822110,Kathy Saltzman,What is Kathy Saltzman's occupation?,politician,journalist,actor,0.22231426031738905,1.5036633110933346,2,0
+4895544,Kyaw Swe,What is Kyaw Swe's occupation?,film director,politician,journalist,0.02615861038998198,3.6435768734530445,4,0
+4999192,G.E.M.,What is G.E.M.'s occupation?,singer-songwriter,composer,actor,0.06270511742464627,2.7693122170558357,5,2
+5294096,Nina Varlamova,What is Nina Varlamova's occupation?,politician,journalist,actor,0.22231426031738905,1.5036633110933346,2,0
+5378331,Paolo Pellizzari,What is Paolo Pellizzari's occupation?,photographer,musician,journalist,0.16389504721123255,1.8085290120462734,3,1
+5417853,Per Risvik,What is Per Risvik's occupation?,politician,musician,actor,0.14943328298682165,1.9009052534051154,3,2
+5431559,Peter Murnoy,What is Peter Murnoy's occupation?,politician,actor,actor,0.4382574707994422,0.8249487084363185,1,0
+5571000,James Cook,What is James Cook's occupation?,sailor,astronomer,actor,0.0004501392622672089,7.705953551371491,15,0
+5573629,Richard Faith,What is Richard Faith's occupation?,composer,actor,actor,0.40131048530695373,0.9130198737003594,1,2
+5576971,Richard Marles,What is Richard Marles's occupation?,politician,actor,actor,0.4382574707994422,0.8249487084363185,1,0
+5600889,Robert Gwilym,What is Robert Gwilym's occupation?,actor,poet,journalist,0.0006377919915785975,7.357498359787942,41,1
+5604342,Robert Lewis,What is Robert Lewis's occupation?,politician,journalist,actor,0.22231426031738905,1.5036633110933346,2,0
+5773194,Ski Beatz,What is Ski Beatz's occupation?,record producer,musician,journalist,0.16402552011857052,1.8077332527849048,3,1
+5978662,Thomas Gifford,What is Thomas Gifford's occupation?,politician,musician,actor,0.14943328298682165,1.9009052534051154,3,2
+5981733,Charlotte von Hagn,What is Charlotte von Hagn's occupation?,actor,journalist,journalist,0.35022933067972495,1.0491671085549674,1,2
+6135583,Wallace Dollase,What is Wallace Dollase's occupation?,horse trainer,actor,actor,0.3764877637146305,0.9768697323642712,1,2
+6184317,William Greaves,What is William Greaves's occupation?,film director,actor,actor,0.43194465543984195,0.8394578113528954,1,0
+6206947,Wise,What is Wise's occupation?,record producer,actor,actor,0.3815312598334452,0.9635624923393786,1,2
+6250781,Þorsteinn Bachmann,What is Þorsteinn Bachmann's occupation?,actor,composer,journalist,0.17587738928327964,1.737968178518157,3,1
+6388150,Marina Baker,What is Marina Baker's occupation?,Playboy Playmate,journalist,actor,0.21854288824670373,1.52077299882591,2,2
+6408631,Franz Seitz Sr.,What is Franz Seitz Sr.'s occupation?,screenwriter,composer,journalist,0.13383953295934403,2.011113711854307,4,1
+6422375,Max Fechner,What is Max Fechner's occupation?,politician,physicist,actor,0.00045169935199444435,7.702493749897518,68,0
+6430975,Teddy Riley,What is Teddy Riley's occupation?,record producer,musician,actor,0.10709556340595763,2.2340337271674384,4,0

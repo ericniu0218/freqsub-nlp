@@ -50,7 +50,6 @@ def main() -> None:
     ents = pd.read_parquet(dir_02a(cfg) / "entities.parquet")
     subj = pd.read_parquet(dir_02a(cfg) / "subjects.parquet")
     names = dict(zip(ents["obj_id"], ents["obj"]))
-    freq = dict(zip(ents["obj_id"], ents["freq_max"]))
     ambiguous = set(subj.loc[subj["ambiguous"], "subj_id"])
 
     shards = [pd.read_parquet(f) for f in (ARTIFACTS / "04_scores").glob("*/country__qa__*.parquet")]
@@ -75,9 +74,7 @@ def main() -> None:
 
     lm = load_model(cfg["model"]["name"], rev, cfg["model"]["dtype"])
     tok = lm.tokenizer
-    demo_pool = q[(q["split"] == "dev") & (~q["subj_id"].isin(ambiguous))]
     bank = PromptBank.from_ids(q, "country", **frozen_demos("country"))  # exactly the scored prompts
-    cand_first = sorted({first_tok(tok, n) for n in names.values()})
 
     def ids_for(r):
         prompt, _, _ = bank.prompt("qa", r["subj_id"], r["question"])

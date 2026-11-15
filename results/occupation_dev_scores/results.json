@@ -1,0 +1,27 @@
+{
+  "status": "development outcomes only; no corpus proximity or held-out test",
+  "model": "allenai/OLMo-2-0425-1B",
+  "revision": "9d3e43659f00c17e6da23cf32333afd1fc39fa1a",
+  "split_manifest_sha256": "837147232cad8d9069141026cb5f2ebdaa134b0340f6eb6d7f38740c36a1664c",
+  "n_questions": 111,
+  "n_candidates": 84,
+  "n_dataset_gold_correct": 27,
+  "n_possible_answers_correct": 31,
+  "n_possible_answers_errors": 80,
+  "chosen_label_counts": {
+    "actor": 35,
+    "journalist": 26,
+    "composer": 15,
+    "musician": 13,
+    "politician": 13,
+    "record producer": 1,
+    "mathematician": 1,
+    "photographer": 1,
+    "model": 1,
+    "librarian": 1,
+    "singer-songwriter": 1,
+    "astronomer": 1,
+    "poet": 1,
+    "physicist": 1
+  }
+}

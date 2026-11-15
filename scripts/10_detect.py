@@ -10,8 +10,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-import pandas as pd  # noqa: E402
-
 from freqsub.detect.selective import fit_and_evaluate, question_features  # noqa: E402
 from freqsub.utils.config import load_config  # noqa: E402
 from freqsub.utils.io import stage_dir, write_manifest, write_parquet  # noqa: E402

@@ -9,3 +9,4 @@ artifacts/**
 *.parquet.tmp
 !artifacts/**/results.json
 !artifacts/**/dynamics.json
+/artifacts/cache/

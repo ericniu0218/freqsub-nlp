@@ -1,9 +1,23 @@
 # Frequency Substitution in Language Models
 
-*All pre-registered analyses complete (test split run once). Every number below is regenerated from `artifacts/` by the scripts in `scripts/`.*
+> **Evidence correction, 2026-11-14 Pacific time.** This is the historical report,
+> not a verified reproduction. The checkout tracks aggregate JSON and manifests
+> but lacks the original candidate scores, sampled windows and prediction rows.
+> The claim below that every number can be regenerated from `artifacts/` is false.
+> The reported gold-exposure slope `0.438 - 0.077 = 0.361` is invalid because
+> the two regressors were standardized separately. The H5 “counts only” detector
+> uses the model's chosen answer and subject popularity; it is not output-free.
+> The selected H4 policies did not improve held-out accuracy, and α=0 for three
+> methods is a no-op rather than evidence that every nonzero correction fails.
+> The H2 trajectory and H3 test cannot be independently verified from tracked
+> question-level outputs. The original country test is spent. The new,
+> wrong-answer-specificity study is specified in [WRONG_ANSWER_PLAN.md](WRONG_ANSWER_PLAN.md)
+> and has no empirical result yet.
+
+*Historical narrative. The tracked aggregate JSON supports arithmetic checks, but the original row-level inputs are missing. The number of local test accesses is unverified.*
 
 ## 1. Question
-When a language model gets a fact wrong, is its wrong answer predictable from its training data? We test this with OLMo-2 1B, whose complete pretraining corpus is public and indexed by infini-gram. That lets us compare the model's choices with **exact** counts from the data it actually saw.
+When a language model gets a fact wrong, is its wrong answer predictable from indexed source text? The historical study used OLMo-2 1B and an infini-gram index of its stage-1 source mixture. Exact model exposure to individual indexed occurrences is unverified.
 
 The hypothesis separates two effects:
 - **Marginal-frequency bias:** the model prefers answers that are common overall. This is known; see "Calibrate Before Use", Zhao et al. 2021.
@@ -26,7 +40,7 @@ infini-gram's AND-queries turned out to be unusable for frequent terms. They are
 3. Fetch about 200 tokens of text around each one.
 4. Record which countries are mentioned there.
 
-The share of windows mentioning country *c* is an unbiased estimate of p(c | subject), with a finite-population standard error. It is exact when the subject has 50 or fewer mentions.
+Under complete uniform retrieval, the raw share is unbiased for **returned-window string hits**, with a finite-population sampling error. It is a census when all occurrences are retrieved and none is blocked. It is not an unbiased estimate of a factual relation, and the later `log1p` transformed feature is not unbiased in the same sense.
 
 **Data-quality rules,** decided from strings, counts and labels alone. The first three were set before any model outputs existed; the label policy was set after a dev-only pipeline dry run, before any test-split analysis:
 - Wikidata alias codes that collide with English words are filtered out ("in" for India, "be" for Belgium, …).
@@ -49,7 +63,7 @@ The share of windows mentioning country *c* is an unbiased estimate of p(c | sub
 
 ## 5. Results (TEST split, run once, as pre-registered)
 
-### H1 (primary): co-occurrence substitution. **Supported.**
+### H1 (primary): archived positive all-choice association
 460 test questions (non-ambiguous subjects, label policy applied); accuracy 65.2%; 160 wrong answers.
 
 | Feature (z-scored) | Coefficient | 95% CI |
@@ -61,11 +75,11 @@ The share of windows mentioning country *c* is an unbiased estimate of p(c | sub
 | answer length (tokens) | −0.084 | [−0.196, 0.027] |
 | is gold | 4.450 | [4.116, 4.783] |
 
-- **Size:** among wrong candidates, one standard deviation more co-occurrence with the subject multiplies the odds of being chosen by about **1.55×**. That holds beyond the candidate's overall frequency, popularity and length.
-- **Exposure to the true answer** also helps (combined coefficient +0.361), slightly less than co-occurrence attracts wrong answers.
+- **Size:** in the archived all-choice regression, one standard deviation more measured co-occurrence for a non-gold candidate is associated with about **1.55×** the relative odds of selection, conditional on the listed controls. This does not directly evaluate which wrong answer wins *conditional on an error*.
+- **Gold-answer exposure:** the originally reported combined coefficient +0.361 is invalid because the main and interaction regressors were standardized separately. Its slope and interval cannot be recovered from the aggregate artifact.
 - **Rank test:** chosen wrong answers sit at the 63.2nd percentile of co-occurrence among wrong candidates (95% CI 59.9–66.8; null 50; p = 0.0001).
 - **Within-question OLS** on the full log-prob distribution agrees (β = 0.279 [0.234, 0.324]).
-- **Likely conservative:** co-occurrence is estimated from 50 sampled windows per subject. That measurement noise attenuates the coefficient toward 0 (errors-in-variables), so the true association is probably at least this large.
+- **Measurement uncertainty:** 50 sampled windows yield many zeros for rare mentions. Nonlinear transformation, blocked retrieval, surface ambiguity and omitted plausibility can bias the fitted coefficient in either direction. The archived result does not establish a lower bound on the association.
 - **Robustness:** every check has a positive coefficient with a CI above 0.
   - Both other prompt templates: 0.418 and 0.501.
   - Length-normalized scoring: 0.391.
@@ -78,23 +92,23 @@ The share of windows mentioning country *c* is an unbiased estimate of p(c | sub
 
 ![accuracy vs exposure](figures/a_accuracy_vs_exposure.png)
 
-### H5: predicting errors. **Supported.**
+### H5: archived error-prediction gain
 | Features | AUROC (detecting errors) | AURC ↓ | Accuracy at 50% coverage |
 |---|---|---|---|
 | Model confidence | 0.893 | 0.113 | 0.922 |
-| Training-corpus counts only | 0.847 | 0.140 | 0.883 |
+| Chosen-answer corpus features and subject popularity | 0.847 | 0.140 | 0.883 |
 | **Both** | **0.924** | **0.099** | **0.935** |
 
-Adding corpus counts to confidence improves AUROC by **+0.031 [+0.013, +0.051]** (question-level bootstrap, 2,000 resamples). Training-data statistics alone, without the model's output, flag errors with AUROC 0.85.
+The stored summary reports an AUROC difference of **+0.031 [+0.013, +0.051]** (question-level bootstrap, 2,000 resamples), but its interval cannot be recomputed without prediction rows. The corpus-feature comparator requires the model's chosen answer and subject popularity; it is not an output-free detector.
 
-### H4: correcting by subtracting a prior. **Not supported (a clear null).**
-On dev, subtracting any prior lowered accuracy steadily as its strength grew, so the tuned strength was 0 for corpus frequency, corpus co-occurrence and contextual calibration, and 0.05 for PMI. Test accuracy is therefore unchanged (65.2% overall; 64.9% on rare facts).
+### H4: selected score corrections did not improve accuracy
+The 41-point development curves are not monotone. The selected strength was 0 for corpus frequency, corpus co-occurrence and contextual calibration, and 0.05 for PMI. All selected policies matched the uncorrected test accuracy (65.2% overall; 64.9% on the defined rare subset).
 
-The likely reason is that this answer distribution is itself skewed toward frequent countries ("United States of America" is the gold answer for 33% of questions). So the model's frequency preference is partly a *useful* prior, and removing it hurts. Testing corrections on a frequency-balanced question set is the natural follow-up.
+The answer distribution is skewed toward frequent countries ("United States of America" is the raw gold answer for 33% of country questions), which is one possible explanation. The selected policies did not improve test accuracy. Three selected α=0 and therefore changed nothing; this does not establish that every nonzero correction hurts.
 
 ![calibration](figures/d_calibration.png)
 
-### H3: mechanism. **Not implicated under the pre-registered rule.**
+### H3: archival mechanism summary, not independently replayable
 - **Logit lens** (160 of 168 test wrong answers are first-token cases): the gold and the chosen wrong answer are tied through layer 9. The wrong answer pulls ahead in **layers 10–13**, peaking at layer 13 (−4.0 logits), and the last two layers recover part of the gap.
 - **Exact direct logit attribution** (decomposition error < 10⁻⁵): the largest pushes toward the wrong answer come from **attention in layers 13 and 15** and from layer 12.
 - **Causal test:** mean-ablating the 3 dev-selected components (L13 attention, L15 attention, L12 MLP) at the answer position, with full answers rescored pairwise:
@@ -105,13 +119,13 @@ The likely reason is that this answer distribution is itself skewed toward frequ
 | **Top-3 components** | **11.9%** | **12.5%** |
 | 20 random 3-component sets | mean 4.0% (95th percentile 8.7%) | mean 3.3% |
 
-- **Verdict:** the top components flip about 3× more errors than random ones. But they also break about 4× more correct answers, more than the pre-registered 2× limit. So they aren't **specific** to substitution; they look like general answer-selection machinery in the late layers.
+- **Archived verdict:** the selected components fail the joint rule because collateral damage exceeds the registered limit. The row-level interventions are absent, and a pairwise gold-versus-old-winner flip is not a full-pool correction. A substitution-specific circuit is unverified.
 - Finding a substitution-specific circuit would need finer units (individual attention heads) or path patching. That's out of scope for the MVP.
 
 ![logit lens](figures/c_logit_lens.png)
 
-### H2: training dynamics (exploratory, all 9 stage-1 checkpoints)
-The same 460 test questions and identical prompts at every checkpoint (both verified):
+### H2: training dynamics (archived aggregates; common-cohort rows unverified)
+The tracked `dynamics.json` reports the following table. The same-cohort rows and exact prompts cannot be checked from this checkout:
 
 | Tokens seen | Accuracy | β co-occurrence [95% CI] | β overall frequency [95% CI] |
 |---|---|---|---|
@@ -125,19 +139,19 @@ The same 460 test questions and identical prompts at every checkpoint (both veri
 | 3,209B | 0.607 | 0.440 [0.352, 0.528] | 0.302 [0.033, 0.571] |
 | 4,001B | 0.652 | 0.438 [0.341, 0.534] | 0.328 [0.053, 0.602] |
 
-- **Co-occurrence substitution is present at every checkpoint** and roughly stable (0.34–0.44, every CI above 0). It doesn't wash out with more training.
+- The archived table reports positive coefficients at each checkpoint. The candidate-score and analysis rows needed to verify a complete common-cohort trajectory are absent, so a stable-through-training conclusion is unverified.
 - **The pull toward overall-frequent answers** rises early, peaking around 105–210B tokens, then declines to about 0.30–0.33. The frequency CIs are wide and overlap across checkpoints, so this trend is suggestive, not established.
-- **Reading:** as training proceeds, the model leans less on raw answer frequency but keeps the subject-specific co-occurrence shortcut.
+- That interpretation remains a hypothesis until the checkpoint rows can be replayed.
 
 ![dynamics](figures/b_dynamics.png)
 
 ## Summary of verdicts
 | Hypothesis | Pre-registered test | Verdict |
 |---|---|---|
-| H1 co-occurrence substitution | β(log co-occurrence) CI > 0 | **Supported**: 0.438 [0.341, 0.534] |
-| H2 training dynamics | descriptive | Substitution stable across training; frequency pull peaks early then fades |
+| H1 co-occurrence substitution | β(log co-occurrence) CI > 0 | **Nominally supported in archived all-choice summary**: 0.438 [0.341, 0.534]; raw rows absent |
+| H2 training dynamics | descriptive | Archived trajectory only; common-cohort replay unverified |
 | H3 mechanism | top-3 ablation flip rate > random 95th percentile, collateral < 2× random | **Not implicated**: flips 11.9% (random 95th percentile 8.7%) but collateral 12.5% (2× random = 6.6%) |
-| H4 prior subtraction | rare-fact accuracy gain CI > 0 | **Not supported**: tuned α = 0; every prior hurts on dev |
+| H4 prior subtraction | rare-fact accuracy gain CI > 0 | **Not supported**: selected policies gave no held-out accuracy gain; three selected α = 0 |
 | H5 error prediction | AUROC(combined) − AUROC(confidence) CI > 0 | **Supported**: +0.031 [+0.013, +0.051] |
 
 ## 6. Limitations

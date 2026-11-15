@@ -42,10 +42,6 @@ def main() -> None:
     data_dir = dir_01(cfg)
     q = pd.read_parquet(data_dir / "questions.parquet")
     ents = pd.read_parquet(dir_02a(cfg) / "entities.parquet")
-    subj = pd.read_parquet(dir_02a(cfg) / "subjects.parquet")
-    freq = dict(zip(ents["obj_id"], ents["freq_max"]))
-    amb = set(subj.loc[subj["ambiguous"], "subj_id"])
-    demo_pool = q[(q["split"] == "dev") & (~q["subj_id"].isin(amb))]
     bank = PromptBank.from_ids(q, "country", **frozen_demos("country"))  # exactly the scored prompts
 
     lm = load_model(cfg["model"]["name"], cfg["model"]["revision"], cfg["model"]["dtype"])

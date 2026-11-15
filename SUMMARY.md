@@ -1,27 +1,11 @@
-# One-page summary: Frequency Substitution in Language Models
+# Frequency Substitution: current evidence
 
-**Question.** When a language model gets a fact wrong, is the wrong answer predictable from its training data?
+**Research question:** Given that a language model chooses a wrong answer, can measurements of its training text predict **which wrong answer** it chooses, beyond the candidate answer's general popularity?
 
-**Why this is testable now.** OLMo-2 (AI2) publishes its full pretraining corpus and its intermediate checkpoints, and infini-gram indexes that corpus. That made it possible to compare a model's choices with what it actually saw in training.
+The original `country` study reported a positive all-choice association on 460 test questions. Its row-level scores and sampled windows are absent from this repository, so the historical fit and intervals cannot be independently replayed. The gold-answer slope in the old report was calculated from separately standardized features and is invalid. The selected score corrections did not improve accuracy. The broad co-occurrence idea was already studied by [Kang and Choi (2023)](https://aclanthology.org/2023.findings-emnlp.518/).
 
-**Setup.**
-- **Model and questions:** OLMo-2 1B (final pre-mid-training checkpoint) on PopQA "country" questions, with every one of the 107 countries scored exactly for every question.
-- **Pre-registration:** the analysis plan was committed before the held-out test split was touched, and the test split was run once.
+The new `occupation` study has an outcome-blind split of **111 development and 421 untouched test questions**, with 84 candidate labels. It asks a narrower predictive question. A grouped-choice model with a separate intercept for each candidate is the baseline. The augmented model adds the candidate's subject-window count. The primary future metric is held-out per-error log-loss improvement, with a paired subject bootstrap. The fresh test is blocked until independent semantic review and complete corpus measurements are available.
 
-**Method contribution.** infini-gram's co-occurrence (AND) counts proved unreliable for frequent terms; the same query returned 152, 4,804 or 274,853 depending on parameters. I replaced them with an unbiased **sampled-context estimator**: sample 50 training-corpus windows around each subject, then count candidates locally, with finite-population standard errors.
+**Development evidence so far:** the pinned OLMo-2 1B checkpoint scored all 84 candidates for 111 development questions. It chose the designated PopQA object on 27 and an answer in PopQA's `possible_answers` on 31, leaving 80 dataset-defined errors across 80 distinct normalized subjects. Of those errors, `actor` and `journalist` were selected 22 times each. An identity-only baseline reached 24/80 top-1 and out-of-fold log loss 2.242 on the provisional development labels; the same folds selected its penalty, so this is descriptive. Public metadata gives more than one accepted candidate for 107 of 532 occupation questions, so a single gold ID is an invalid error rule. A 12-question, 10-window pilot found a positive corpus hit for only one of eight dataset-defined wrong winners. The 50-window development probe stopped on an API 429 after one complete subject; there is no identity-plus-co-occurrence comparison.
 
-**Findings (test split, 95% CIs).**
-1. **Co-occurrence substitution (main result, supported).** Wrong answers are disproportionately countries that appear near the subject in training data. One SD more co-occurrence makes a wrong answer about **1.55× more likely to be chosen** (β = 0.438 [0.341, 0.534]). That holds beyond overall frequency, popularity and name length, and every robustness check agrees. The effect is stronger for ambiguous names.
-2. **Present throughout training.** Across 9 checkpoints (21B–4T tokens) substitution stays stable, while the pull toward overall-frequent answers rises early and then fades.
-3. **Training data predicts errors.** Adding corpus counts to model confidence improves error detection: AUROC 0.924 vs 0.893, a gain of +0.031 [+0.013, +0.051]. Counts alone reach 0.85.
-4. **Honest nulls.**
-   - *Subtracting a frequency prior* ("Calibrate Before Use"-style) **hurts**: frequent answers really are right more often here.
-   - *Ablating the late-layer components* most responsible for the wrong answer flips 12% of errors, 3× random, but breaks 12.5% of correct answers. So they aren't substitution-specific.
-
-**Engineering.**
-- **Pipeline:** a resumable, config-hashed pipeline with manifests for every artifact, and 42 tests.
-- **Tests that guard the statistics and tools:** planted-effect tests for the statistics, an exact decomposition check for the attribution tools, and a no-ablation control.
-- **Bugs caught before the test split:** a biased counting API, alias collisions ("in" = India), a saturated metric, and an mtime-based input bug. Each fix is documented.
-- **Stack:** PyTorch, Hugging Face Transformers, statsmodels, scikit-learn, infini-gram. Free compute only.
-
-**Code and full report:** `freqsub/` (see `REPORT.md`).
+**Current verdict:** there is no new held-out wrong-answer-specificity result and no established novelty claim. The [detailed new report](WRONG_ANSWER_REPORT.md), [protocol and execution log](WRONG_ANSWER_PLAN.md), and [archived historical report](REPORT.md) give the evidence and limits.

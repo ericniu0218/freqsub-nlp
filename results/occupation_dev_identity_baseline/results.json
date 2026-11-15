@@ -1,0 +1,20 @@
+{
+  "status": "exploratory development baseline; possible_answers validity only",
+  "score_rows_sha256": "0b91310a31711e1fa49f2816c9b6a3b6a760495e4cd4672fccde7211d200e9c4",
+  "n_dev_questions": 111,
+  "n_dev_errors": 80,
+  "n_distinct_error_subjects": 80,
+  "n_candidates_total": 84,
+  "penalty_grid": {
+    "0.0001": 2.405884085687199,
+    "0.001": 2.241975578788194,
+    "0.01": 2.2644839724372967,
+    "0.1": 3.169801332732932,
+    "1.0": 4.245859939635598
+  },
+  "selected_penalty": 0.001,
+  "mean_out_of_fold_log_loss": 2.241975578788194,
+  "uniform_wrong_choice_log_loss": 4.415647549560556,
+  "out_of_fold_top1": 0.3,
+  "out_of_fold_mean_rank": 5.5375
+}
