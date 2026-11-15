@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # freqsub: frequency substitution in language models
 
 **Status: all pre-registered analyses complete.**
@@ -38,6 +37,3 @@ Every stage writes Parquet plus a `manifest.json` (config, git SHA, package vers
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m pytest -q        # 42 tests: data, counts client, sampler/estimator, scorer, interp tools, planted-effect stats, calibration, error prediction, prompt reproducibility
 ```
-=======
-# freqsub
->>>>>>> a5531e8b80b4e2d6bc340f499f2015080382d032
